@@ -1,21 +1,10 @@
 services:
   jekyll:
     image: jekyll/jekyll:latest
+    command: jekyll serve --livereload --force_polling --incremental --watch --host 0.0.0.0
     ports:
       - "4000:4000"
     volumes:
       - .:/srv/jekyll
-    command:
-      - jekyll
-      - serve
-      - --watch
-      - --incremental
-      - --force_polling
-      - --livereload
     environment:
       JEKYLL_ENV: development
-    entrypoint:
-      - /bin/bash
-      - -c
-      - |
-        bundle install && jekyll serve --watch --incremental --force_polling --livereload
