@@ -1,3 +1,19 @@
+# Jekyll build artifacts
 _site/
 .sass-cache/
+.jekyll-cache/
 .jekyll-metadata
+
+# Exclude bundle config
+.bundle/
+vendor/bundle/
+
+# Exclude environment variables and configuration
+.env
+
+# macOS Folder Attributes
+.DS_Store
+**/.DS_Store
+
+# IDE and Editor folders
+.vscode/
